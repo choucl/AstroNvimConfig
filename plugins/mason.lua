@@ -10,6 +10,7 @@ return {
         "lua_ls",
         "clangd",
         "pyright",
+        "svlangserver",
       })
     end,
   },

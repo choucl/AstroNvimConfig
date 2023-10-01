@@ -32,6 +32,9 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     ["<leader>w"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+    -- git hunk navigation
+    ["<leader>gj"] = { ":Gitsigns next_hunk<cr>", desc = "Go to next Git hunk" },
+    ["<leader>gk"] = { ":Gitsigns prev_hunk<cr>", desc = "Go to previous Git hunk" },
   },
   t = {
     -- setting a mapping to false will disable it

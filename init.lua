@@ -81,5 +81,11 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.filetype.add {
+      extension = {
+        bsv = "bsv",
+      },
+    }
+    require "user.autocmds"
   end,
 }
