@@ -9,4 +9,24 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      local ft = require "Comment.ft"
+      ft.bsv = { "//%s", "/*%s*/" }
+    end,
+  },
+  {
+    "nvim-tree/nvim-web-devicons",
+    opts = {
+      override = {
+        bsv = {
+          icon = "󰘚",
+          color = "#51a0cf",
+          cterm_color = "74",
+          name = "BSV",
+        },
+      },
+    },
+  },
 }
