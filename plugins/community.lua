@@ -4,6 +4,7 @@ return {
   -- example of importing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
-  -- { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.mellow-nvim", enable = true },
+  { import = "astrocommunity.colorscheme.nightfox-nvim", enable = true },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
