@@ -3,8 +3,12 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+vim.g.copilot_no_tab_map = true
 return {
   -- first key is the mode
+  i = {
+    ["<C-J>"] = { 'copilot#Accept("\\<CR>")', expr = true, replace_keycodes = false },
+  },
   n = {
     -- second key is the lefthand side of the map
 
