@@ -9,11 +9,13 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  { "github/copilot.vim", event = "BufRead,FileReadPre" },
   {
     "numToStr/Comment.nvim",
     config = function()
       local ft = require "Comment.ft"
       ft.bsv = { "//%s", "/*%s*/" }
+      ft.systemverilog = { "//%s", "/*%s*/" }
     end,
   },
   {
