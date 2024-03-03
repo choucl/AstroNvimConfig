@@ -37,6 +37,10 @@ return {
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
+          "verilog",
+          "systemverilog",
+          "c",
+          "cpp",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -70,20 +74,21 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
-    -- }
+    vim.filetype.add {
+      -- extension = {
+      --   foo = "fooscript",
+      -- },
+      -- filename = {
+      --   ["Foofile"] = "fooscript",
+      -- },
+      pattern = {
+        [".*sva"] = "systemverilog",
+      },
+    }
     vim.filetype.add {
       extension = {
         bsv = "bsv",
+        systemverilog = "sv",
       },
     }
     require "user.autocmds"
