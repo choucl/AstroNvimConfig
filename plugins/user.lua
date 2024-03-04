@@ -11,6 +11,17 @@ return {
   -- },
   { "github/copilot.vim", event = "BufRead,FileReadPre" },
   {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "BufRead,FileReadPre",
+    setup = function()
+      require("nvim-treesitter.configs").setup {
+        context = {
+          enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        },
+      }
+    end,
+  },
+  {
     "numToStr/Comment.nvim",
     config = function()
       local ft = require "Comment.ft"
