@@ -7,7 +7,7 @@ vim.g.copilot_no_tab_map = true
 return {
   -- first key is the mode
   i = {
-    ["<C-J>"] = { 'copilot#Accept("\\<CR>")', expr = true, replace_keycodes = false },
+    ["<C-L>"] = { 'copilot#Accept("\\<CR>")', expr = true, replace_keycodes = false },
   },
   n = {
     -- second key is the lefthand side of the map
