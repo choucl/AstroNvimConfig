@@ -9,10 +9,10 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  { "github/copilot.vim", event = "BufRead,FileReadPre" },
+  { "github/copilot.vim", event = "User,AstroFile" },
   {
     "nvim-treesitter/nvim-treesitter-context",
-    event = "BufRead,FileReadPre",
+    event = "User,AstroFile",
     setup = function()
       require("nvim-treesitter.configs").setup {
         context = {
@@ -27,6 +27,16 @@ return {
       local ft = require "Comment.ft"
       ft.bsv = { "//%s", "/*%s*/" }
       ft.systemverilog = { "//%s", "/*%s*/" }
+    end,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
     end,
   },
   {
